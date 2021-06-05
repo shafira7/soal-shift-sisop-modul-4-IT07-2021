@@ -29,7 +29,7 @@ Soal SinSei modul 4 ini terbagi menjadi beberapa bagian soal:
   b. Jika direktori direname, direktori tsb menjadi direktori spesial<br>
   c. Jika direktori yang terencode dihilangkan "A_is_a_”nya, maka direktori tsb akan menjadi direktori normal<br>
   d. Direktori spesial ini akan mengembalikan enkripsi pada direktori “AtoZ_” maupun “RX_” namun sifat rekursif kedua direktori tetap berjalan pada subdirektori<br>
-  e.Semua nama file pada fuse akan berubah menjadi lowercase pada direktori spedial, dengan tambahan ekstensi nilai desimal dari biner perbedaan nama.<br>
+  e. Semua nama file pada fuse akan berubah menjadi lowercase pada direktori spedial, dengan tambahan ekstensi nilai desimal dari biner perbedaan nama.<br>
 
 ### 4. Log system
   a. Nama file log berupa “SinSeiFS.log” pada direktori home user<br>
