@@ -45,7 +45,7 @@ Soal SinSei modul 4 ini terbagi menjadi beberapa bagian soal:
 Secara singkat Atbash Cipher adalahcipher substitusi  sederhana  dengan  cara  membalikkan  alfabet sehingga setiap huruf dipetakan ke huruf di posisi yang sama kebalikan dari abjad. 
 
 #### Enkripsi Atbash Cipher <a name="Atbash"></a>
-```c
+```
 void decriptAtbash(char *enc){
 	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
 	int flag1=0,flag2=0;
@@ -76,7 +76,7 @@ void decriptAtbash(char *enc){
 Enkripsi Atbash ini digunakan jika kita menjalankan command ```mkdir``` dan ```rename``` dimana fungsi ini akan menerima nama direktorinya dan mengecek apakah dalam membuat direkrtori dengan command ```mkdir``` terdapat ```AtoZ_```, apabila ada maka pada saat membuat file didalam direktori itu , nama file tersebut kan terencode dengan atbash cipher. Begitu pula saat melakukan rename folder dengan nama ```AtoZ_```, nama file didalam folder tersebut akan terencode dengan Atbash Cipher ini. Algoritma ini menerima inputan data berupa filepath.
 
 #### Enkripsi Atbash Cipher <a name="Atbash"></a>
-```c
+```
 void encriptAtbash(char *enc){
 	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
 	int b=0;
@@ -96,9 +96,39 @@ void encriptAtbash(char *enc){
 ```
 Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file yang namanya sudah memiliki awalan ```AtoZ_``` dan ketika file sudah tidak memiliki nama ```AtoZ_``` maka isi dari file tersebut juga akan kembali seperti semula 
 
-## Dokumentasi <a name="Dokumentasi"></a>
+### Soal 4 <a name="Soal_4"></a>
+  ####4.1 CreateLog
+  Pertama akan dibuka direktori untuk menyimpan file log nantinya. lalu dideklarasikan semua format tanggal bulan tahun dan waktu. Lalu dibuat if else untuk pembagian 2 level (WARNING & INFO)<br>
+  `void creteLog(int level,char *call,const char *info){
+	FILE *log = fopen("/home/nanda/SinSeiFS.log" , "a");
+	time_t now = time(0);
+	struct tm tstruct = *localtime(&now);
+	int tahun=0,bulan=0,hari=0,jam=0,menit=0,detik=0;
+	tahun = tstruct.tm_year + 1900;
+	bulan = tstruct.tm_mon + 1;
+	hari = tstruct.tm_mday;
+	jam = tstruct.tm_hour;
+	menit = tstruct.tm_min;
+	detik = tstruct.tm_sec;
+	if(level == 1){
+		fprintf(log, "WARNING::%02d%02d%d-%02d:%02d:%02d:%s::%s\n",hari,bulan,tahun,jam,menit,detik,call,info);
+	}
+	else{
+		fprintf(log, "INFO::%02d%02d%d-%02d:%02d:%02d:%s::%s\n",hari,bulan,tahun,jam,menit,detik,call,info);
+	}
+	fclose(log);
+}`
+
 
 ## Kendala <a name="Kendala"></a>
+  Untuk saat ini kami masih belum bisa menyelesaikan bagian:
+  ###1. Soal 2<br>
+  Kami sudah menyelesaikan enkripsi kombinasi untuk bagian soal no 2, namun saat dijalankan antara mkdir dan rename, enkripsi mereka saling menimpa satu sama lain. <br>
+  Kami juga mengalami kendala untuk bagian soal no `2.e`. Pembagian file berhasl dilakukan, namun saat kami mengakses melalui filesystem, file belum bisa menjadi normal kembali.<br>
+  ###2. Soal 3<br>
+  Kami belum dapat menyelesaikan bagian soal ini.![image](https://user-images.githubusercontent.com/60997606/120894759-4ef9c680-c644-11eb-94f2-e42cf77a63cc.png)
+<br>
+  
 
 ## Terima Kasih
 
