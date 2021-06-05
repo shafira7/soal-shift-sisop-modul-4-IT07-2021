@@ -45,3 +45,5 @@ Soal SinSei modul 4 ini terbagi menjadi beberapa bagian soal:
 
 ## Kendala <a name="Kendala"></a>
 
+## Terima Kasih
+
