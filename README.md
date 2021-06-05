@@ -99,7 +99,8 @@ Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file ya
 ### Soal 4 <a name="Soal_4"></a>
   ####4.1 CreateLog
   Pertama akan dibuka direktori untuk menyimpan file log nantinya. lalu dideklarasikan semua format tanggal bulan tahun dan waktu. Lalu dibuat if else untuk pembagian 2 level (WARNING & INFO)<br>
-  `void creteLog(int level,char *call,const char *info){
+  ```
+  void creteLog(int level,char *call,const char *info){
 	FILE *log = fopen("/home/nanda/SinSeiFS.log" , "a");
 	time_t now = time(0);
 	struct tm tstruct = *localtime(&now);
@@ -117,8 +118,8 @@ Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file ya
 		fprintf(log, "INFO::%02d%02d%d-%02d:%02d:%02d:%s::%s\n",hari,bulan,tahun,jam,menit,detik,call,info);
 	}
 	fclose(log);
-}`
-
+}
+```
 
 ## Kendala <a name="Kendala"></a>
   Untuk saat ini kami masih belum bisa menyelesaikan bagian:
@@ -126,7 +127,8 @@ Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file ya
   Kami sudah menyelesaikan enkripsi kombinasi untuk bagian soal no 2, namun saat dijalankan antara mkdir dan rename, enkripsi mereka saling menimpa satu sama lain. <br>
   Kami juga mengalami kendala untuk bagian soal no `2.e`. Pembagian file berhasl dilakukan, namun saat kami mengakses melalui filesystem, file belum bisa menjadi normal kembali.<br>
   ###2. Soal 3<br>
-  Kami belum dapat menyelesaikan bagian soal ini.![image](https://user-images.githubusercontent.com/60997606/120894759-4ef9c680-c644-11eb-94f2-e42cf77a63cc.png)
+  Kami belum dapat menyelesaikan bagian soal ini.![image](https://user-images.githubusercontent.com/60997606/120894980-31792c80-c645-11eb-8ab5-314fdab179cb.png)
+
 <br>
   
 
