@@ -97,7 +97,7 @@ void encriptAtbash(char *enc){
 Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file yang namanya sudah memiliki awalan ```AtoZ_``` dan ketika file sudah tidak memiliki nama ```AtoZ_``` maka isi dari file tersebut juga akan kembali seperti semula 
 
 ### Soal 4 <a name="Soal_4"></a>
-  ####4.1 CreateLog
+  #### 4.1 CreateLog
   Pertama akan dibuka direktori untuk menyimpan file log nantinya. lalu dideklarasikan semua format tanggal bulan tahun dan waktu. Lalu dibuat if else untuk pembagian 2 level (WARNING & INFO)<br>
   ```
   void creteLog(int level,char *call,const char *info){
@@ -123,10 +123,10 @@ Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file ya
 
 ## Kendala <a name="Kendala"></a>
   Untuk saat ini kami masih belum bisa menyelesaikan bagian:
-  ###1. Soal 2<br>
+  ### 1. Soal 2<br>
   Kami sudah menyelesaikan enkripsi kombinasi untuk bagian soal no 2, namun saat dijalankan antara mkdir dan rename, enkripsi mereka saling menimpa satu sama lain. <br>
   Kami juga mengalami kendala untuk bagian soal no `2.e`. Pembagian file berhasl dilakukan, namun saat kami mengakses melalui filesystem, file belum bisa menjadi normal kembali.<br>
-  ###2. Soal 3<br>
+  ### 2. Soal 3<br>
   Kami belum dapat menyelesaikan bagian soal ini.![image](https://user-images.githubusercontent.com/60997606/120894980-31792c80-c645-11eb-8ab5-314fdab179cb.png)
 
 <br>
