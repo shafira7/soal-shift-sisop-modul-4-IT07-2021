@@ -127,7 +127,7 @@ Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file ya
   Kami sudah menyelesaikan enkripsi kombinasi untuk bagian soal no 2, namun saat dijalankan antara mkdir dan rename, enkripsi mereka saling menimpa satu sama lain. <br>
   Kami juga mengalami kendala untuk bagian soal no 2.e. Pembagian file berhasil dilakukan, namun saat kami mengakses melalui filesystem, file belum bisa menjadi normal kembali.<br>
   ### 2. Soal 3<br>
-  Kami belum dapat menyelesaikan bagian soal ini.!<br>[image](https://user-images.githubusercontent.com/60997606/120894980-31792c80-c645-11eb-8ab5-314fdab179cb.png)
+  Kami belum dapat menyelesaikan bagian soal ini.![image](https://user-images.githubusercontent.com/60997606/120894980-31792c80-c645-11eb-8ab5-314fdab179cb.png)
 
 <br>
   
