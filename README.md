@@ -41,6 +41,61 @@ Soal SinSei modul 4 ini terbagi menjadi beberapa bagian soal:
 
 ## Source Code <a name="Source_Code"></a>
 
+### Soal 1 <a name="Soal1"></a>
+Secara singkat Atbash Cipher adalahcipher substitusi  sederhana  dengan  cara  membalikkan  alfabet sehingga setiap huruf dipetakan ke huruf di posisi yang sama kebalikan dari abjad. 
+
+#### Enkripsi Atbash Cipher <a name="Atbash"></a>
+```
+void decriptAtbash(char *enc){
+	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
+	int flag1=0,flag2=0;
+	if(enc[0]=='A' && enc[1]=='t' && enc[2]=='o' && enc[3]=='Z' && enc[4]=='_'){
+		flag1 = 1;
+		flag2 = 1;
+	}
+	int b=0;
+	b = strlen(getExt(enc));
+	for ( int i = 0; i < strlen(enc)-b ;i++) {
+		if(enc[i] == '/'){
+			flag1=0;
+		}
+		if((flag1!=1 && enc[i] != '/') && flag2==1){
+			if(!((enc[i]>=0&&enc[i]<65)||(enc[i]>90&&enc[i]<97)||(enc[i]>122&&enc[i]<=127))){
+				if(enc[i]>='A'&&enc[i]<='Z')
+					enc[i] = 'Z'+'A'-enc[i];
+				if(enc[i]>='a'&&enc[i]<='z')
+					enc[i] = 'z'+'a'-enc[i];
+			} 
+		}
+		if(((enc[i]>=0&&enc[i]<65)||(enc[i]>90&&enc[i]<97)||(enc[i]>122&&enc[i]<=127))){
+		enc[i] = enc[i];    
+		}
+	}
+}
+```
+Enkripsi Atbash ini digunakan jika kita menjalankan command ```mkdir``` dan ```rename``` dimana fungsi ini akan menerima nama direktorinya dan mengecek apakah dalam membuat direkrtori dengan command ```mkdir``` terdapat ```AtoZ_```, apabila ada maka pada saat membuat file didalam direktori itu , nama file tersebut kan terencode dengan atbash cipher. Begitu pula saat melakukan rename folder dengan nama ```AtoZ_```, nama file didalam folder tersebut akan terencode dengan Atbash Cipher ini. Algoritma ini menerima inputan data berupa filepath.
+
+#### Enkripsi Atbash Cipher <a name="Atbash"></a>
+```
+void encriptAtbash(char *enc){
+	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
+	int b=0;
+	b = strlen(getExt(enc));
+	for ( int i = 0; i < strlen(enc)-b ;i++) {
+		if(!((enc[i]>=0&&enc[i]<65)||(enc[i]>90&&enc[i]<97)||(enc[i]>122&&enc[i]<=127))){
+			if(enc[i]>='A'&&enc[i]<='Z')
+				enc[i] = 'Z'+'A'-enc[i];
+			if(enc[i]>='a'&&enc[i]<='z')
+				enc[i] = 'z'+'a'-enc[i];
+		} 
+		if(((enc[i]>=0&&enc[i]<65)||(enc[i]>90&&enc[i]<97)||(enc[i]>122&&enc[i]<=127))){
+		enc[i] = enc[i];    
+		}
+	}
+}
+```
+Algoritma ini berfungsi untuk melakukan rekursif enkripsi atbash kedalam file yang namanya sudah memiliki awalan ```AtoZ_``` dan ketika file sudah tidak memiliki nama ```AtoZ_``` maka isi dari file tersebut juga akan kembali seperti semula 
+
 ## Dokumentasi <a name="Dokumentasi"></a>
 
 ## Kendala <a name="Kendala"></a>
