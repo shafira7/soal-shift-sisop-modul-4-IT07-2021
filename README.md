@@ -45,7 +45,7 @@ Soal SinSei modul 4 ini terbagi menjadi beberapa bagian soal:
 Secara singkat Atbash Cipher adalahcipher substitusi  sederhana  dengan  cara  membalikkan  alfabet sehingga setiap huruf dipetakan ke huruf di posisi yang sama kebalikan dari abjad. 
 
 #### Enkripsi Atbash Cipher <a name="Atbash"></a>
-```
+```c
 void decriptAtbash(char *enc){
 	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
 	int flag1=0,flag2=0;
@@ -76,7 +76,7 @@ void decriptAtbash(char *enc){
 Enkripsi Atbash ini digunakan jika kita menjalankan command ```mkdir``` dan ```rename``` dimana fungsi ini akan menerima nama direktorinya dan mengecek apakah dalam membuat direkrtori dengan command ```mkdir``` terdapat ```AtoZ_```, apabila ada maka pada saat membuat file didalam direktori itu , nama file tersebut kan terencode dengan atbash cipher. Begitu pula saat melakukan rename folder dengan nama ```AtoZ_```, nama file didalam folder tersebut akan terencode dengan Atbash Cipher ini. Algoritma ini menerima inputan data berupa filepath.
 
 #### Enkripsi Atbash Cipher <a name="Atbash"></a>
-```
+```c
 void encriptAtbash(char *enc){
 	if(!strcmp(enc,".") || !strcmp(enc,"..")) return;
 	int b=0;
